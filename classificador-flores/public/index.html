@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Flores Avançado</title>
+    <link rel="stylesheet" href="./assets/css/index.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h2>Classificador de Imagem de Flores</h2>
+
+        <div class="section upload-section">
+            <h3>1. Selecione uma Imagem</h3>
+            <input type="file" id="image-upload" accept="image/*">
+            <img id="image-preview" src="" alt="Prévia da imagem" class="hidden">
+        </div>
+
+        <div class="section classify-section">
+            <h3>2. Classificar</h3>
+            <button id="classify-button" disabled>Classificar Imagem</button>
+        </div>
+
+        <div class="section result-section">
+            <h3>3. Resultado da Classificação</h3>
+            <div id="label-container">
+                <p class="loading-message">Carregando modelo de IA...</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
